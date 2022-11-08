@@ -1,7 +1,7 @@
 # Math-150-material
 This repository regroups material created for the course "Math 150: Mathematical Modeling" at the University of California Merced. The material has been designed for an online class during the Spring 2021.
 
-Feel free to use it !
+**Feel free to use it !**
 
 
 # Structure
