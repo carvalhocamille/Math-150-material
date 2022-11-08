@@ -1,0 +1,58 @@
+Math 150 Spring 2021: discussion section schedule + topics
+
+W 1 : individual (~30), 1 week to turn in (grader  = TA) 
+	-setting up Python on their machine, running basic commands in class
+	-basic modeling in class
+	  	  
+W 2 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-basic commands python (at home)
+	-basic modeling in class
+	-one ODE problem in class
+
+W 3 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-ODEs coding in class (1 population)
+	-ODEs theoretical at home to turn in
+	
+W 4 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-ODEs coding in class (system of populations)
+	-ODEs theoretical at home to turn in
+	
+W 5 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-logistic map in class
+	-ODEs theoretical at home to turn in
+
+W 6 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-random walk coding in class. Only 2D
+	
+W 7 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-random walk: derive governing equations from random walkers in 2D
+	
+W 8 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-homework mostly
+	-finish exercise on probabilities at home to turn in
+
+W 9 : group (~10 groups), 2 weeks to turn in (grader  = TA) 
+	-optimization: theoretical exercise start in class
+	-provide help for mid-semester video if needed (check on groups)
+	
+W 10 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-optimization (pre-filled) coding in class
+	-optimization/linear programming in class: codes given, mostly observations and small report
+	
+W 11 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-MLE exercises in class
+	-finish at home if needed
+	
+W 12 : group (~10 groups), 1 week to turn in (grader  = TA) 
+	-Markov chains exercise in class
+	-results coding at home to turn in
+	
+W 13 : work on FINAL project. No grading
+	
+W 14 : work on FINAL project. No grading
+	
+W 15 : work on FINAL project report. No grading
+
+	
+	  
+	 

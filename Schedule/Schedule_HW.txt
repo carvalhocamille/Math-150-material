@@ -1,0 +1,32 @@
+Math 150 Spring 2021: Homework schedule + topics
+
+HW 1: individual (grader = TA) 2 weeks to do
+	-installing anaconda/jupyter, create a jupyter notebook with basic commands, scales
+	
+HW 2: individual (grader = TA) 1 week to do
+	-dynamical systems: 1-2 exercices
+
+HW3: group (grader = IOR) 2 weeks to do
+	-dynamical systems: modeling a game with population dynamics https://slither.io
+
+HW 4: individual (grader = TA) 1 week to do
+	-random walks: fundamental solution of heat equation
+	(basic coding will be done in discussion section) 
+	
+HW 5: group (grader = IOR) 2 weeks to do
+	-random walks: modeling problem based on developped codes from previous homework + worksheet
+	
+HW 6: individual (grader = TA) 2 weeks to do
+	-optimization: 1 exercise (theoretical, continuity of Worksheet 9)
+	
+HW 7: group (grader = IOR) 2 weeks to do
+	-optimization group project + small MLE problem
+	
+HW 8: individual (grader = TA) 1 week to do
+	-Markov chains: one exercise on SIR 
+	
+HW 9: group (grader = IOR) 2 weeks to do
+	-SDEs: SIR model 
+	
+	
+	
