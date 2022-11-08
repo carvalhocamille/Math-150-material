@@ -4,13 +4,19 @@ This repository regroups material created for the course "Math 150: Mathematical
 Feel free to use it !
 
 
-#Structure
+# Structure
 
 ### Syllabus
 Presents the learning outcomes of the class, and the structure
 
 ### Schedule
 Provides a temptative schedule of each lecture time with associated topic, dedicated discussion sections and homeworks
+
+### Textbook_style_handout
+Provides typed notes and exercises to complete the lecture notes. There are no textbook for the class, this served as (typing is still in progress).
+
+### Lecture notes
+Handwritten lectures notes used for lectures. The material was provided to the students.
 
 ### Worksheets
 Provides assignments done as groups during the discussion sections
@@ -20,3 +26,6 @@ Provides the open-problem oriented assignments. Some are individual (I), some ar
 
 ### Final Project
 Provides guidelines on what is expected for the final group project.
+
+### Codes
+Provides jupyter notebooks used either in class or discussion sections to illustrate concepts.
