@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\input{headerhw.tex}
+\usepackage{graphicx}
+\chead{\textbf{Homework 4: individual}}
+
+\begin{document}
+
+{\bf Submit your work on Catcourses by March 3rd at 11:59pm}
+
+Please be aware that in this homework, your approach and your justifications will be given {\bf a lot} more importance than your final results. This means that you should think about how you will present and explain your work so that what you turn in makes sense, even if it is read by someone unfamiliar with the problem. This is a good training for your final report project.\\
+\textbf{Read entirely the homework assignment first !}
+
+%\begin{itemize}
+%\item Be familiar with notebook
+%\item scales, create simple models maybe
+%\item dynamical systems a little bit ? 
+%\end{itemize}
+\textbf{Individual portion}
+\begin{enumerate}
+\item Consider the function 
+\[
+f(x,t) = \frac{e^{-(x- \alpha t)^2/cDt}}{\sqrt{c \pi D t }}
+\]
+with some constant $c>0$ and $\alpha>0$. This function is solution to the advection-diffusion equation of the form $f_t = A f_{xx} - B f_x$. Determine $A$ and $B$.
+\item Show that $ \displaystyle \int_{-\infty}^{\infty} \frac{e^{-\frac{x^2}{L}}}{\sqrt{ \pi L}} \ dx = 1$. What do you deduce for $f$ ?
+%\item Derive the governing equation, and its parameter, describing the expectation of the number of walkers moving in a two dimensional plane, at location $(x,y)$ at time $t$ if every time step $\Delta t$ the walkers follow the following rule:\\
+%	-- Take a step left of length $\Delta x $ with probability 1/6 \\
+%	-- Take a step right of length $\Delta x $ with probability 1/6 \\
+%	-- Take a step down of length $ \Delta y$ with probability 1/3 \\
+%	-- Take a step up of length $ \Delta y$ with probability 1/3 \\
+%You may introduce some coefficients along the way.
+
+\item Submit all your answers \textbf{in a single .pdf} on Catcourses your answers under the assignment \texttt{Homework 4 (individual)}. 
+\end{enumerate}
+
+
+%In the file {\tt HW1\_xvec.mat} you will find data relevant for this homework.
+%
+%You may load this data, and plot it, into Matlab using the following commands:
+%\begin{verbatim}
+%data = load('HW1_xvec.mat');
+%plot(data.x,data.y1)
+%plot(data.x,data.y2)
+%xshort = data.x(1:100);
+%y3short = data.y3(1:100);
+%plot(xshort,y3short)
+% \end{verbatim}  
+%  
+% \begin{enumerate}
+% \item Define two simple weather models that predict daily temperature and rainfall. Compare those models with commercial predictions and actual weather every day for one week, and assess which models performed best. Justify your rankings.
+% 
+% \item Try to determine the best possible function to fit the data $y_1$, which represents a function of the data in $x$ (that is for every index $i$, $y_1^i = f_1(x^i)$). Indicate what functions you tried (even the ones that were not the best) and how you determined which function was the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_2$, which represents a function of the data in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_{3short}$, for the first 100 entries of $y_3$ which represents a {\bf periodic} function of the first 100 entries in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best.
+% \end{enumerate}
+   
+% y1 = 3*x.^2 + 4./x + 0.01*sin(4*x) + 3;
+% y2 = 2*log(x) - x/3;
+% y3 = cos(7*x*2*pi) + 3*sin(x*2*pi) + 0.5*sin(4*x*2*pi);
+% for the first 100 entries only, periodic afterwards
+
+
+\end{document}

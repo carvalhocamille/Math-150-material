@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\input{headerhw.tex}
+
+\chead{\textbf{Homework 1: individual work}}
+
+\begin{document}
+
+{\bf Submit your work on Catcourses by February 3th at 11:59pm}
+
+Please be aware that in this homework, your approach and your justifications will be given {\bf a lot} more importance than your final results. This means that you should think about how you will present and explain your work so that what you turn in makes sense, even if it is read by someone unfamiliar with the problem. This is a good training for your final report project.\\
+\textbf{Read entirely the homework assignment first !}
+
+%\begin{itemize}
+%\item Be familiar with notebook
+%\item scales, create simple models maybe
+%\item dynamical systems a little bit ? 
+%\end{itemize}
+
+\begin{enumerate}
+\item Work on the exercises 1.3, 1.4, 1.5, 1.6  from the typed notes \texttt{Math150\_Chapter1.pdf}
+%\item Watch the following video \url{https://www.youtube.com/watch?v=HW29067qVWk}
+%\begin{enumerate}
+%\item What is the video about ? What did you learn ? Write a small paragraph to summarize. \textit{A person who didn't watch the video should be able to understand your statement.}
+%\end{enumerate}
+\item Suppose you have some set of observations, $x_o$, over time $t$, and a set $x$ of predictions you made. In the file {\tt hw1\_data.csv} you will find data relevant for this exercise. Using Jupyter notebook and create a .ipynb called {\tt hw1.ipynb}. You may load this data, and plot it, using the following commands:
+\begin{verbatim}
+%matplotlib inline
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import pandas as pd
+from matplotlib.pyplot import plot as plt
+
+file = 'hw1_data.csv'
+df = pd.read_csv(file)
+t = df.iloc[:,0]
+x = df.iloc[:,1]
+x0 = df.iloc[:,2]
+fig, ax = plt.subplots(1, 1, figsize=(10,10))
+ax.plot(t,x,'x', label = 'x')
+ax.plot(t, x0,'+', label = 'x0')
+plt.title('Observations and predictions')
+ax.set_xlabel("t")
+ax.set_ylabel("x values")
+ax.legend()
+ \end{verbatim}
+ \begin{enumerate}
+ \item Compare the observations and the predictions: what do you conclude ? 
+ \item Find a model of the error $x(t)-x_0(t)$. Indicate all things you tried (explain your reasoning). You may try to plot different things, we expect a title, a legend and labels on each plots.
+ % \end{enumerate}
+  \end{enumerate}
+%  \item The fundamental frequencies of vibrations of strings of similar material depend primarily on length $l$, mass per unit length $\mu$ and tension (force) $F$ on the string.  
+%
+%  \begin{enumerate}
+%  \item Using fundamental dimensions ($L$, $M$, $T$) show that $\frac{\sqrt{F}}{l\sqrt{\mu}}$ has the dimension of a frequency. 
+%  \item Using the above formula, try to answer the question: \textit{Why do stringed musical instruments have strings of different lengths and thickness ? }
+%  \end{enumerate}
+\item Submit on Catcourses your answers (including {\tt hw1.ipynb})under the assignment \texttt{Homework 1 (individual)}. You can scan handwritten answers for the exercises from the typed notes, or type them directly in the {\tt hw1.ipynb} (Jupyter handles latex in markdown mode !).
+\end{enumerate}
+
+%In the file {\tt HW1\_xvec.mat} you will find data relevant for this homework.
+%
+%You may load this data, and plot it, into Matlab using the following commands:
+%\begin{verbatim}
+%data = load('HW1_xvec.mat');
+%plot(data.x,data.y1)
+%plot(data.x,data.y2)
+%xshort = data.x(1:100);
+%y3short = data.y3(1:100);
+%plot(xshort,y3short)
+% \end{verbatim}  
+%  
+% \begin{enumerate}
+% \item Define two simple weather models that predict daily temperature and rainfall. Compare those models with commercial predictions and actual weather every day for one week, and assess which models performed best. Justify your rankings.
+% 
+% \item Try to determine the best possible function to fit the data $y_1$, which represents a function of the data in $x$ (that is for every index $i$, $y_1^i = f_1(x^i)$). Indicate what functions you tried (even the ones that were not the best) and how you determined which function was the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_2$, which represents a function of the data in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_{3short}$, for the first 100 entries of $y_3$ which represents a {\bf periodic} function of the first 100 entries in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best.
+% \end{enumerate}
+   
+% y1 = 3*x.^2 + 4./x + 0.01*sin(4*x) + 3;
+% y2 = 2*log(x) - x/3;
+% y3 = cos(7*x*2*pi) + 3*sin(x*2*pi) + 0.5*sin(4*x*2*pi);
+% for the first 100 entries only, periodic afterwards
+
+
+\end{document}

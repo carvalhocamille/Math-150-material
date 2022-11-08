@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\input{headerhw.tex}
+
+\chead{\textbf{Homework 2: individual work}}
+
+\begin{document}
+
+{\bf Submit your work on Catcourses by February 10th at 11:59pm}
+
+Please be aware that in this homework, your approach and your justifications will be given {\bf a lot} more importance than your final results. This means that you should think about how you will present and explain your work so that what you turn in makes sense, even if it is read by someone unfamiliar with the problem. This is a good training for your final report project.\\
+\textbf{Read entirely the homework assignment first !}
+
+%\begin{itemize}
+%\item Be familiar with notebook
+%\item scales, create simple models maybe
+%\item dynamical systems a little bit ? 
+%\end{itemize}
+
+\begin{enumerate}
+\item Work on the exercises 2.4, 2.5 from the typed notes \texttt{Math150\_Chapter2.pdf}
+
+\item  We want to characterize the growth of the number of fish ($x$) and shrimps ($y$) in Lake Yosemite, using the model
+\[ \begin{aligned}
+& \frac{d x}{d t} = \alpha x (1 - x -\beta y) \\
+& \frac{d y}{d t} = \gamma y (1 - x - \beta y) \\
+\end{aligned} 
+\]
+\begin{enumerate}
+\item Whis the role of the quantities $\alpha, \beta, \gamma$ ? 
+\item Suppose $\alpha >0, \beta>0, \gamma>0$. Is this a prey-predator model ? 
+\item Find the critical points.
+\item Determine the stability of the critical points, if you can.
+\item If you can't determine the stability of the critical points, what could you do ?
+\end{enumerate}
+
+% \item Consider the discrete map given by $y_{n+1} = \alpha y_n (1-y_n^2)$. 
+% \begin{enumerate}
+% \item Determine the fixed points of this map.
+% \item Determine theoretically whether to expect convergence or divergence to those fixed points, depending on the value of $\alpha$.
+% \item Determine numerically the different possible behaviors of this map for various values of $\alpha$, when starting at $y_1=0.6$. Use your answers to b) as a guide.
+% \end{enumerate}
+% 
+% \item Consider the system
+% \begin{eqnarray*}
+%\frac{dx}{dt} &=& x (a- b y -px)  \\
+%\frac{dy}{dt} &=& y(fx -c - q y)
+%\end{eqnarray*}
+%with $a,b,c,f,p,q >0$, and we suppose that $\frac{c}{f} < \frac{a}{p}$.
+
+%\begin{enumerate}
+%\item What kind of model is this system ? Justify.
+%\item Determine the equilibrium points.
+%\item Discuss the stability of the equilibrium points. Provide details for at least one.
+%%\item Consider the function $L(x,y) = f x^\ast (\frac{x}{x^\ast} - \log (\frac{x}{x^\ast}) -1) +by^\ast (\frac{y}{y^\ast} - \log (\frac{y}{y^\ast}) -1)  $, with $(x^\ast, y^\ast)$ an equilibrium. Determine if $L$ is a Lyapunov function for each equilibrium. If not, what do you conclude ? If yes, what is the attractor region ?
+%\end{enumerate}
+
+
+\item Submit all your answers \textbf{in a single .pdf} (or a single .ipynb) on Catcourses your answers under the assignment \texttt{Homework 2 (individual)}. You can scan handwritten answers or type them.
+\end{enumerate}
+
+%In the file {\tt HW1\_xvec.mat} you will find data relevant for this homework.
+%
+%You may load this data, and plot it, into Matlab using the following commands:
+%\begin{verbatim}
+%data = load('HW1_xvec.mat');
+%plot(data.x,data.y1)
+%plot(data.x,data.y2)
+%xshort = data.x(1:100);
+%y3short = data.y3(1:100);
+%plot(xshort,y3short)
+% \end{verbatim}  
+%  
+% \begin{enumerate}
+% \item Define two simple weather models that predict daily temperature and rainfall. Compare those models with commercial predictions and actual weather every day for one week, and assess which models performed best. Justify your rankings.
+% 
+% \item Try to determine the best possible function to fit the data $y_1$, which represents a function of the data in $x$ (that is for every index $i$, $y_1^i = f_1(x^i)$). Indicate what functions you tried (even the ones that were not the best) and how you determined which function was the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_2$, which represents a function of the data in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_{3short}$, for the first 100 entries of $y_3$ which represents a {\bf periodic} function of the first 100 entries in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best.
+% \end{enumerate}
+   
+% y1 = 3*x.^2 + 4./x + 0.01*sin(4*x) + 3;
+% y2 = 2*log(x) - x/3;
+% y3 = cos(7*x*2*pi) + 3*sin(x*2*pi) + 0.5*sin(4*x*2*pi);
+% for the first 100 entries only, periodic afterwards
+
+
+\end{document}

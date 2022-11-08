@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\input{headerhw.tex}
+\usepackage{graphicx}
+\chead{\textbf{Homework 6: individual}}
+
+\begin{document}
+
+{\bf Submit your work on Catcourses by March 31st at 11:59pm}
+
+%Please be aware that in this homework, your approach and your justifications will be given {\bf a lot} more importance than your final results. This means that you should think about how you will present and explain your work so that what you turn in makes sense, even if it is read by someone unfamiliar with the problem. This is a good training for your final report project.\\
+\textbf{Read entirely the homework assignment first !}
+
+%\begin{itemize}
+%\item Be familiar with notebook
+%\item scales, create simple models maybe
+%\item dynamical systems a little bit ? 
+%\end{itemize}
+This homework is a continuation of \texttt{Worksheet 9}. From \texttt{Worksheet 9} we have the function $J_2: K_2 \to \mathbb{R}$ such that for $v \in \mathbb{R}^3$, 
+\[ J_2(v) = \frac{1}{2} v^\intercal A v - b^\intercal v,\]
+where the matrix $A \in \mathbb{R}^{3 \times 3}$, and the vector $b\in \mathbb{R}^3$ are defined by
+\[
+A = \begin{pmatrix}
+2 & -1 & 0 \\
+-1 & 2 & -1 \\
+0 & -1 & 2
+\end{pmatrix}, \quad b = \begin{pmatrix}
+-3 \\ 1 \\2
+\end{pmatrix}.
+\]
+We consider the set $K_2 = \lbrace  v  = \langle v_1, v_2, v_3\rangle \in \mathbb{R}^3 | v_2 + v_3 = 0, \, v_1 \geq 0\rbrace$.
+The goal is to study the problem
+\[  \underset{ v \in K_2}{\min} J_2(v)\]
+
+\begin{enumerate}
+\item Using results from \texttt{Worksheet 9}, state if we can find a unique solution or not.
+%\item Rewrite the constrains in $K_1$ of the form $K_1  = \lbrace v \in \mathbb{R}^3|Cv \leq f, v \geq 0 \rbrace $ with $C$, $f$ to determine.
+\item Rewrite the constrains in $K_2$ of the form $K_2  = \lbrace v \in \mathbb{R}^3|Cv \leq f \rbrace $ with $C$, $f$ to determine.
+%\item Use the simplex method to compute the maximum of $J_1$.
+\item Write the optimal conditions to find the minimum of $J_2$.
+\item Compute the minimum of $J_2$.
+\item Come up with an application this problem could represent (be creative).
+\item Submit your work on Catcourses under the assignment \texttt{Homework 4 (individual)} \textbf{as a .pdf}. 
+\end{enumerate}
+
+
+\end{document}

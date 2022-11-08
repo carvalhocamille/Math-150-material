@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+
+\input{headerhw.tex}
+
+\chead{\textbf{Discussion 3:}}
+
+\begin{document}
+
+The goals of this discussion section are: 
+
+\begin{enumerate}
+\item Be able to study equilibrium of some dynamical systems
+\item Identify a model of population dynamics
+\end{enumerate}
+
+Participation in discussion section counts as 5\% of the grade. Completion of the worksheets counts as 20\% of the grade. \textbf{Submit your worksheet work by February 10th at 2:59pm.}
+
+\begin{enumerate}
+\item We consider an Initial Value Problem based on the Gompertz growth model, defined by
+\[ \frac{d y}{d t} = \alpha y \ln \left( \frac{M}{y} \right), \quad y(0) = 2.
+\]
+\begin{enumerate}
+\item The solution of the above IVP is of the form $y(t)  = A e^{\ln(B) e^{C t}}$, with $A,B,C$ some constants to find. Determine $A,B,C$.
+\item Implement the analytic solution of the three growth models: exponential ($\frac{d y}{d t} = \alpha y$), logistic ($\frac{d y}{d t} = \alpha y(1 - y/M)$), and Gompertz ($ \frac{d y}{d t} = \alpha y \ln \left( \frac{M}{y} \right)$) using Python. Load the file {\tt data.cvs}. You may load this data, and plot it, using the following commands:
+\begin{verbatim}
+import pandas as pd
+from matplotlib.pyplot import plot as plt
+file = 'data.csv'
+df = pd.read_csv(file)
+t = df.iloc[:,0]
+x = df.iloc[:,1]
+plt(t,x,'x')
+ \end{verbatim}
+Which model characterizes better the data ? Explain your reasoning, and all attempts you have considered.
+\end{enumerate}
+\item Work on the exercise 2.3 from the typed notes \texttt{Math150\_Chapter2.pdf} 
+\item Submit your work on Catcourses under the assignment \texttt{Worksheet 3} \textbf{as a .ipynb}. Do not forget to submit scans of the handwritten answers as well if they are not typed in the .ipynb.
+
+\end{enumerate}
+
+\end{document}

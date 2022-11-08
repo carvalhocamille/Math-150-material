@@ -1,0 +1,302 @@
+\minitoc
+%\addcontentsline{toc}{section}{Introduction} 
+
+In this chapter we will briefly answer the following questions:
+\begin{itemize}
+\item What is a mathematical model ?
+\item Why would we need a mathematical model ?
+\item What constitutes a good model ?
+\item What are the keys elements to develop a model ? 
+\end{itemize}
+We will also introduce some mathematical concepts that will be necessary throughout the course.\\
+\section{What is a mathematical model ? }
+A mathematical model is a sequence of mathematical steps that represent some real system. It can also be described as an attempt to describe \textit{some} part of the real world in mathematical terms. The term \textit{some} is essential: it is impossible to describe entirely and completely the real world. We will need to make simplifications or assumptions to access some valuable information. Let us give an example. A road map, a geographical map, or a plant collection are models to mimic aspects of the Earth surface. A mathematical model to describe the previous models uses mathematical tools such as parameterization, geometry, equations and others.
+
+\section{Why would we need a mathematical model ? }
+A mathematical model is useful for \textbf{predictions}. Applications such as weather forecast, asteroids trajectories, the evolution of the Earth surface, or in economics are common examples where predictions are crucial. A mathematical model is also useful for \textbf{understanding known results}. In the latter, one can imagine validating constitutive laws such as Kepler's law, understanding what is ballistic, plane trajectories and others.
+
+\section{What is good mathematical model ? }
+A good model needs to be \textbf{predictably accurate, self-contained, and cheap}. Note that accuracy requires to have access to some measure, we will discuss metrics later in the chapter. A self-contained model means that it doesn't require parameters we can't know. Finally, cheapness will be considered as comparisons to experiments for example. A simpler model that is easy to run and that provides useful information is a crucial asset compared to experiments. Though it is not meant to replace experimental data, it creates the starting point to push technology.\\
+
+Since we are looking for predictions, this implies that we will consider time-dependent phenomena (evolution problems), and we will consider time-dependent equations as a starting model (review of ODEs). It also means that there is some uncertainty, we will need to handle randomness in our model (review of stochastics and probabilities). Accuracy implies that we will make error estimates and therefore we will need a metric and identify quantities of interest to measure (review of numerical analysis). Finally we will look for a gain of time in computations, analytically or numerically, to provide a competitive model (review of optimization).\\
+
+To sum up, to develop a model we will need to:
+\begin{itemize}
+\item (i) understand what we want to model;
+\item (ii) have a well-defined objective;
+\item (iii) identify essential features (contrary to peripheral ones).
+\end{itemize}
+
+\begin{Example}
+Suppose we want to model the sleep patterns of a UCM student (what). We will track the number of hours slept (well-defined objective), as well as consider the students fatigue/energy (essential features). Then this mathematical model satisfies the three above requirements. Note that the number of dots on the students' pijamas is unlikely to affect their sleep, and constitutes an example of peripheral feature (not needed for the model).
+\end{Example}
+\begin{Exercise}
+Come up with a simple model that satisfies the requirements (i), (ii), (iii). In particular provide both examples of essential and peripheral features.
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+\end{Exercise}
+\section{What are the keys elements to develop a model ? }
+
+Now that we have a better understanding of what is a mathematical model, we hope you will explore a variety of models and use your creativity, and curiosity. This can be intimidating at first, so keep in mind to apply the principle: Assume-Borrow-Criticize.\\
+\textbf{Assume: }you will need to make assumptions. As mentioned before we can't model everything, real-life phenomena are extremely complicated. For example, modeling the Earth as a sphere to compute its electromagnetic field (compared to considering all variations from the surface) is an adequate assumption to start with. \\
+\textbf{Borrow: }use concepts and assumptions from literature, your colleagues, etc. Make parallels between things you know. As an example, modeling a tree growth and a population growth might draw from the same core math equation.\\
+\textbf{Criticize: }questions your assumptions, as well the ones you borrowed until the model explains the observations. For example, suppose your model assumes that the Earth is flat to compute its electromagnetic field. If obtained results (experimental, numerical) do not match with measures, then your initial assumption is most likely the reason for a poor model.
+
+\begin{Example}
+Suppose we want to model the scores of the Golden State Warriors for the next season. We propose the following models:
+\begin{enumerate}
+\item Model 1: win all the games
+\item Model 2: win-lose-win-lose-win-lose...
+\item Model 3: lose all the games
+\end{enumerate}
+To find what is the best model among the proposed ones, what would we do ? If data from the previous seasons is available, one can compare which model match the observations. 
+\end{Example}
+\begin{Exercise}
+Come up with two simple models of weather forecast for the upcoming week. Use data from the previous week to assess which model seems better. Check within the week if your model was actually accurate. What are your conclusions ?
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+\end{Exercise}
+
+
+\section{Metrics and norms}
+
+Since we will use some metric (to measure quantities mathematically), let's briefly review some useful norms.
+
+\begin{definition}
+Given a vector $\vec{x} = \langle x_1, \dots, x_N\rangle \in \mathbb{R}^N$, the $p$-norm of $\vec{x}$, $p\in \mathbb{N}^\ast$, is given by
+\[ || \vec{x} ||_p := \left( \sum \limits_{i = 1}^N |x_i|^p\right)^{\frac{1}{p}}.\]
+\end{definition}
+In particular, for $p=1$, we obtain the Taxicab norm (or also called $\ell_1$ norm):
+\[ || \vec{x} ||_1 = \sum \limits_{i = 1}^N |x_i|.
+\]
+For $p=1$, we obtain the Euclidean norm (also representing the distance from the origin):
+\[ || \vec{x} ||_2 = \sqrt{ \sum \limits_{i = 1}^N |x_i|^2 }.
+\]
+It is also interesting to consider $p = \infty$, which gives the uniform norm:
+\[  || \vec{x} ||_\infty = \max \limits_{i = 1, \dots, N} |x_i|. 
+\]
+How do we obtain the uniform norm ? Let's suppose $|x_j| = \max \limits_{i = 1, \dots, N} |x_i|$. Then
+\[ || \vec{x} ||_p :=  |x_j| \underset{\to {}_{p \to \infty} 0 \text{ except for } i = j}{\underbrace{\left(  \sum \limits_{i = 1}^N \left(\frac{|x_i|}{|x_j|} \right) ^p \right)^{\frac{1}{p}}}} \]
+The uniform norm can be seen as measuring the \textit{worst case scenario}.\\
+
+To understand the difference between the three above norms, let's explore them in the case $N = 2$. 
+
+\begin{Exercise}
+Consider the sets
+\[S_1 = \lbrace \vec{x} = (x_1,x_2) \in \mathbb{R}^2 |\,\,  || \vec{x} ||_1 = 1\rbrace\]
+\[S_2 = \lbrace \vec{x} = (x_1,x_2) \in \mathbb{R}^2 | \, \,  || \vec{x} ||_2 = 1\rbrace\]
+\[S_\infty = \lbrace \vec{x} = (x_1,x_2) \in \mathbb{R}^2 | \, \,|| \vec{x} ||_\infty = 1\rbrace\]
+Explicit the norm in each case, and sketch the three sets on the same graph. What do you conclude ? Are the norms measuring the same thing ?  
+
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+\end{Exercise}
+
+As illustrated by the above exercise, it is important to specify which norm you consider in your models.\\
+
+It will be useful to use those norms to measure errors. Given some observations $\vec{x}_{obs} \in \mathbb{R}^N$, and some predictions $\vec{x} \in \mathbb{R}^N$ from our model. How do we compare our model with the observed data ?
+
+\begin{definition}
+Given $\vec{x}_{obs}, \vec{x} \in \mathbb{R}^N$, the absolute error between $\vec{x}_{obs} $ and $\vec{x}$ is given by 
+\[||\vec{x}_{obs}  - \vec{x} ||, \]with $|| \cdot ||$ representing the considered norm. The relative error between $\vec{x}_{obs} $ and $\vec{x}$ is given by 
+\[ \displaystyle \frac{||\vec{x}_{obs}  - \vec{x} ||}{||\vec{x}_{obs}|| }, \]with $|| \cdot ||$ representing the considered norm.
+\end{definition}
+
+Norm that there are other norms that could be useful to consider: the log error $\log ||\vec{x}_{obs}  - \vec{x} ||$ when the error varies too fast, the exponential error $e^{||\vec{x}_{obs}  - \vec{x} ||}$ is one wants to track small error variations, operator norms, etc. It will depend on the situation, what it is needed to measure. \\
+
+\begin{remark}
+Note that $|| \vec{x} ||_p$, for $\vec{x} \in \mathbb{R}^N$ depends on $N$. In particular if $\vec{x}$ represents a growing data set, then the norms \textbf{scales} with $N$. To avoid this effect it can be useful to consider  $\frac{1}{N}|| \vec{x} ||_p$, especially with we need to compare various vectors of different sizes.
+\end{remark}
+
+Finally, discrete norms are also useful. Keep in mind we can use booleans as metric:
+\[ d(x,y) := \begin{cases} 1 \quad x = y, \\
+0 \quad x \neq y
+\end{cases}\]
+
+\textbf{Representation is important, do not neglect it ! It is essential to change your point of view (representation of quantities) to gain the most of it.}
+\section{Scales and non-dimensionalizing}
+
+Each phenomenon you want to model possesses characteristics. We consider four fundamental characteristics/dimensions: size (L), time (T), mass (M), temperature (C). 
+The four fundamental dimensions $L,T,M,C$ allow to express the dimension of all other quantities:
+\begin{itemize}
+\item The dimension of speed is $L T^{-1}$ (distance over time)
+\item The dimension of acceleration is $LT^{-2}$ (distance over time squared)
+\item The dimension of density (of a fluid for example) is $M L^{-3}$ (mass per volume)
+\item The dimension of a force is $ML T^{-2}$ (mass times acceleration)
+\item And many others...
+\end{itemize}
+
+Now we have dimensions to express quantities of interest, you will have to able to determine if your results are relevant. To that aim, you will need to have some orders in mind.
+\begin{Example}
+Suppose we want to study the growth of bacteria and cells. We cannot use the same scales ! For instance, the characteristic speed of bateria can vary from $10 \mu m /s$ to $1000 \mu /s$, whereas the speed of cells vary from $\mu m$ per seconds to some $\mu m$ per hours (much much slower phenomena !). It is important to be critical and look for some acceptable of orders of magnitude given the problem you consider. 
+\end{Example}
+
+\begin{Exercise}
+For the upcoming Spring Break, you have exciting plans: you're flying to Paris ! You are scheduled to board on a brand new A380 plane from San Francisco to Paris.
+After some computations, you find that this plane has an average speed of $10^6 m/s$. Does this result make sense ? Justify your answer. You may use the fact that the distance San Francisco - Paris is of the order of 10,000 km.\\
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+\end{Exercise}
+
+As mentioned before, we make parallels between phenomena, and a mathematical model can describe multiple situations. Going back to the example of the speed of bacteria and cells, it might be fastidious to redo all computations by just changing dimensions of parameters. To avoid this, we can \textbf{non-dimensionalize}: once we understand/solve the non-dimensionalized problems it becomes straightforward to add dimensions in the end. Let's do an example to clarify.
+
+\begin{Example}
+We want to track the motion of a particle over time, $\vec{x}(t)$, governed by the equation
+\[ \displaystyle \frac{d \vec{x}}{dt} = \vec{f}(\vec{x},t).\]
+Suppose this equation allows to track both the trajectory of a photon and debris in space. Both operate at significantly different scales, so let's non-dimensionalize. To that aim, we consider
+\[ \underline{x} = \displaystyle \frac{\vec{x}}{L}, \quad L \mbox{ is a characteristic length, like the size of the particle} ;\]
+\[ \underline{t} = \displaystyle \frac{\vec{t}}{T}, \quad T \mbox{ is a characteristic time, like the particle life-time} ;\]
+\[ \underline{V} = \displaystyle \frac{\underline{x}}{\underline{t}} \mbox{ describes a characteristic speed of the problem}.\]
+The idea is to replace in the governing equation all dimensions $\vec{x}, t$ by their associated non-dimensionalized $\underline{x}, \underline{t}$. We obtain
+\[ 
+\displaystyle \frac{d \vec{x}}{dt} =  \frac{d (\underline{x} L) }{d (\underline{t}T)} = \frac{ L}{T} \frac{d \underline{x}  }{d \underline{t}} = \underline{V} \frac{d \underline{x}  }{d \underline{t}} \]
+\[ 
+\displaystyle \vec{f}(\vec{x},t)=  \vec{f}(\underline{x} L,\underline{t}T)
+\]
+then we have
+\[ \displaystyle \frac{d \underline{x}  }{d \underline{t}}  = \frac{1}{V}  \vec{f}(\underline{x} L,\underline{t}T) \]
+where there is no dimension anymore ! It it more interesting to solve the non-dimensionalized equation then put back the intrinsic features of the problem then solving the equation for each parameters. 
+\end{Example}
+
+\begin{Example}
+Suppose we consider a bubble embedded in a immiscible fluid. The bubble is a sphere of radius $a$, density $\mu$, moves with a velocity $\vec{v_0}$. The fluid exercises a force $\vec{F}$ onto the bubble. Let's find a non-dimensionalized quantity. This non-dimensionalized parameter could play an important role in the governing equations (for example Stokes, Navier-Stokes here). \\
+
+To that aim let's precise the dimensions of all quantities available:
+ \begin{itemize}
+ \item The dimension of the radius $a$ is $L$
+\item The dimension of the velocity $\vec{v_0}$ is $L T^{-1}$ 
+\item The dimension of density $\mu$ is $M L^{-3}$ 
+\item The dimension of a force $\vec{F}$ is $ML T^{-2}$
+\end{itemize}
+
+Can we combine the above quantities to obtain a non-dimensionalized one ? Note that $a^2 \mu |\vec{v_0}|^2$ has the dimension $L^2  \cdot M L^{-3} \cdot L^2 T^{-2} =  ML T^{-2}$, which is the dimension of a force. Then 
+\[ \displaystyle \frac{|\vec{F}|}{a^2 \mu |\vec{v_0}|^2}\]
+has no dimension.
+\end{Example}
+\begin{Exercise}
+The Reynolds number helps predict flow patterns in different fluid flow situations. In particular at low Reynolds numbers, the flow tends to be laminar, whereas at high Reynolds number the flow tends to be turbulent. It is given by
+$$\displaystyle \mathrm {Re} =\frac{\rho u L}{\mu }=\frac{u L}{\nu },$$
+where
+$\rho$ is the density of the fluid, $u$ is the flow speed, $L$ is a characteristic linear dimension, $\mu$ is the dynamic viscosity of the fluid (in $N·s/m^2$), and $\nu$ is the kinematic viscosity of the fluid (in $m^2/s$).\\
+Show that the Reynolds number has no dimension.
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+\end{Exercise}
+
+\begin{Exercise}
+Consider the heat equation (to be investigated later in this class) in two dimension:
+\[  \displaystyle \frac{\partial u}{\partial t}(x,y,t) = D \Delta u(x,y,t)  =D ( \partial_{xx} u + \partial_{yy} u),\]
+with $D$ the diffusivity coefficient (in $L T^{-2}$).
+Non-dimensionalize the heat equation of the form:
+\[  \displaystyle \frac{\partial \underline{u}}{\partial \underline{t}} =   \underline{D}\Delta \underline{u}\]
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+
+\dotfill
+\end{Exercise}
+
+\section{Let's start modeling !}
+As mentioned before, we will explore several phenomena in the course. In particular we will consider evolution problems (Dynamical systems), investigate uncertainty (random walks, likelihood, probabilities), and identify for the measure (optimization, control, error estimates). We start with population dynamics in the next chapter.

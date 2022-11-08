@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\input{headerhw.tex}
+
+\chead{\textbf{Discussion 11: April 7th}}
+
+\begin{document}
+The goal of this discussion section is to get familiar with maximizing likelihood.\\
+
+Participation in discussion section counts as 5\% of the grade. Completion of the worksheets counts as 20\% of the grade. \textbf{Submit your worksheet work by {April 14th} at 2:59pm.}
+
+
+
+
+
+\begin{enumerate}
+\item Suppose that $X$ is a discrete random variable with the following probability mass function:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+X & 0 & 1 & 2 & 3 \\
+\hline
+P(X) & $ \theta /3$ & $ 2 \theta /3$ & $2 (1 - \theta)/3$ & $(1-\theta)/3$
+\end{tabular}
+\end{center}
+with $0 \leq \theta \leq 1$ is a parameter. The following 15 observations were taken from such a distibrution: (3,0,2,1,3,2,1,0,2,1,3,2,1,0,0). We want to estimate the maximum likelihood estimate of $\theta$.
+\begin{enumerate}
+\item Knowing that the Likelihood function is given by $F(\theta) = \prod \limits_{i  = 1}^N P(X = x_i)$, given the observations $x_1, \dots, x_N$, write $F(\theta)$ using the 10 observations.
+\item Write $L(\theta) = \log F(\theta)$ and find the maximum $\theta^\star$.
+\end{enumerate}
+\item Let $X_1, \dots, X_N$ be independent and identically distributed sample from a Poisson distribution with parameter $\lambda$. In other words \[ P (X = x | \lambda) = \frac{ \lambda^x e^{-\lambda}}{x !}.\]
+Find the Maximum Likelihood Estimate of the parameter $\lambda$ (Consider given observations $x_1, x_2,\dots, x_N$).
+%\item Let $X_1, \dots, X_N$ be independent and identically distributed sample from a uniform distribution with parameter $\theta$. In other words \[ P (X = x | \theta) = \begin{cases}
+%& \frac{ 1}{\theta} \quad  0 \leq x \leq \theta,\\
+%& 0 \mbox{ otherwise}
+%\end{cases}.\]
+%Assume $0 \leq X_1 \leq X_2 \leq \dots \leq X_N \leq \theta$. Find the Maximum Likelihood Estimate of the parameter $\theta$ (Consider given observations $x_1, x_2,\dots, x_N$).
+\item Submit your work on Catcourses under the assignment \texttt{Worksheet 11} \textbf{as a .pdf}. 
+\end{enumerate}
+
+\end{document}

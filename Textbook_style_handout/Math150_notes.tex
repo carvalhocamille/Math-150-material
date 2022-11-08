@@ -1,0 +1,420 @@
+\documentclass[11pt,twoside,titlepage]{book}
+%\documentclass[11pt]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel} 
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+\usepackage{changepage}
+%\usepackage{kpfonts} % \usepackage{lmodern} \usepackage{fourier}
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\usepackage{mathtools}
+\usepackage{mathrsfs} 
+\usepackage{tabularx}
+\usepackage{yfonts}
+\usepackage{enumerate} 
+\usepackage{tikz}
+\usepackage[labelformat=simple, labelsep=endash, font=normalsize, labelformat=simple]{subcaption}
+\usepackage{fancyhdr} % pour les tetes et pieds de page
+\usepackage[Alien]{fncychap} % pour les titres de chapitre
+\usepackage{titlesec} 
+\usepackage{titletoc}
+\usepackage[a4paper]{geometry}
+\usepackage{stmaryrd} % pourles doubles braket
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{textcomp} % pour utiliser °
+\usepackage{gensymb}
+
+%\usepackage{lipsum} % bblabla test
+\usepackage{empheq} % numeroter chacune des equations dans un paquet
+
+\usepackage[pdfborder={0 0 0}]{hyperref}				% si tu compile avec PDFlaTeX les liens/toc/footnote... seront cliquables
+\usepackage{amsfonts} %permet de rajouter des caractères en maths dont les lettres en double barre
+\usepackage{graphicx} %m\'ethode pour ins\'erer des images version net
+\DeclareGraphicsExtensions{.eps,.pdf,.png,.jpg,.JPG,.jpeg,.ps,.svg}
+\graphicspath{{logos/}{chapters/}{img/}}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{blkarray}
+\usepackage{mathrsfs} %pour les lettres arrondies
+\usepackage{mathdots}% pour les matrices
+\usepackage{minitoc}
+\usepackage{appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{cancel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{subfig} %pour faire des sous-figure
+%\usepackage[numbers]{natbib}
+%\usepackage[T1]{fontenc}
+\DeclareTextSymbol{\degre}{T1}{6}
+%\usepackage{ textcomp }
+%=================================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% PARAMETRES DIVERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\geometry{height=23cm,width=17cm}
+
+\fancyheadoffset{0.1 cm} 
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RO]{\thepage}
+
+\fancyfoot[L]{Math 150 Spring 2021}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+
+\assignpagestyle{\part}{empty}
+\titleformat{\part}[display]  
+  {\normalfont\huge\bfseries\filcenter}{\partname\ \thepart}{22pt}{\Huge}
+ \fancyhead[LE]{\textbf{\textsc{\thepage}}}
+\fancyhead[RE]{\nouppercase{\textbf{\textsc{\leftmark}}}}
+  \renewcommand{\headrulewidth}{1.pt}
+  \renewcommand{\footrulewidth}{1.pt}
+%\assignpagestyle{\chapter}{empty}
+
+%\let\oldclearpage\clearpage
+%\def\clearpage{\oldclearpage\thispagestyle{empty}}
+
+\mathtoolsset{showonlyrefs}
+
+%\usetikzlibrary{babel}
+
+\DeclareCaptionSubType*{figure}
+\renewcommand\thesubfigure{\thefigure\:\!\alph{subfigure}}
+\renewcommand{\subfigurename}{\figurename}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% COMMANDES PERSO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand\abstractname{Abstract}  %%% here
+%\makeatletter
+%\if@titlepage
+%  \newenvironment{abstract}{%
+%      \titlepage
+%      \null\vfil
+%      \@beginparpenalty\@lowpenalty
+%      \begin{center}%
+%        \bfseries \abstractname
+%        \@endparpenalty\@M
+%      \end{center}}%
+%     {\par\vfil\null\endtitlepage}
+%\else
+%  \newenvironment{abstract}{%
+%      \if@twocolumn
+%        \section*{\abstractname}%
+%      \else
+%        \small
+%       \begin{center}%
+%          {\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
+%        \end{center}%
+%        \quotation
+%      \fi}
+%      {\if@twocolumn\else\endquotation\fi}
+%\fi
+%\makeatother
+
+\renewcommand{\l}{\left\langle}
+\renewcommand{\r}{\right\rangle}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\mf}{\mathbf}
+
+\newcommand{\ds}{\displaystyle}
+
+\DeclareMathOperator{\supp}{\mathrm{supp}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\Nabla}{\boldsymbol \nabla}
+\newcommand{\diff}{\,\mathrm{d}}
+
+
+\makeatletter
+\newcommand{\tableofcontents@hook}{}
+\newcommand{\tableofcontentshook}[1]{\renewcommand{\tableofcontents@hook}{#1}}
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \tableofcontents@hook
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+\makeatother
+
+\newcommand{\ddiff}[2]{\displaystyle \frac{\partial {#1}}{\partial {#2}}}
+\newcommand\todo[1]{\textcolor{red}{#1}}
+\newcommand\verif[1]{\textcolor{blue}{A VERIFIER: #1}}
+\newcommand\ftr[1]{\footnote{\textcolor{red}{#1}}}
+\newcommand\ft[1]{\footnote{#1}}
+\newcommand{\out}{\mrm{out}}
+\newcommand{\ing}{\mrm{in}}
+\newcommand{\Cplx}{\mathbb{C}}
+\newcommand{\bfc}{\mathbf{c}}
+\newcommand{\bfk}{\mathbf{k}}
+\def\Lrond{\mathscr{L}}
+\def\mrm{\mathrm}
+\newcommand{\Frac}{\displaystyle\frac}
+\newcommand{\drond}{\partial}
+\newcommand{\coker}{\mathrm{coker }}
+\renewcommand{\div}{\mrm{div}}
+\newcommand{\curl}{{\text{curl }}} 
+% Les ensembles de nombres
+\newcommand{\eR}{\mathbb{R}}
+\newcommand{\eC}{\mathbb{C}}
+% pour la T coercivite
+%pour les contrastes
+\newcommand{\ke}{\kappa_{\eps}} 
+\newcommand{\contrast}{\kappa_{\eps} = \displaystyle{\frac{\eps_1}{\eps_2}}} 
+\newcommand{\oO}{\theta} 
+\newcommand{\dsp}{\displaystyle}
+\newcommand{\tT}{\mathtt{T}}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\ubf}[1]{\underline{\mathbf{#1}}}
+%\newcommand{\bf}[1]{\mathbf{#1}}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+%\newcommand{\Rot}{\mathbf{rot }~}
+%\newcommand{\diver}{\mbox{div}}
+\newcommand{\chge}{}
+\newcommand{\Om}{\Omega}
+\newcommand{\plas}{\text{sp} }
+
+\newcommand{\e}[1]
+{\eps_#1} 
+\newcommand{\grad}{\nabla}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\ks}{\kappa_\sigma}
+\newcommand{\di}{\mathrm{d}}
+\newcommand{\me}{\mathrm{m}}
+
+\newcommand{\image}[3]  %Macro pour ins\'erer des images centr\'ees        %
+{\begin{figure}[H]                                               %
+	\begin{center}                                                     %
+	\includegraphics[width=#3\columnwidth]{#1}                         %
+	\caption{#2} \label{#1}                                        %
+	\end{center}                                                       %
+	\end{figure}                                                       %
+}     
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\re}[1]
+{\textcolor{red}{#1}}
+\newcommand{\egaldef}{\stackrel{\text{def}}{=}} 
+\newcommand{\pt}{{\textup{pt}}}
+%\newcommand{\drond}{\partial}
+%\DeclareMathOperator{\grad}{\nabla}
+\DeclareMathOperator{\diver}{{\mathrm{div}}} 
+\DeclareMathOperator{\rot}{ \mathrm{{rot}} } 
+%\newcommand{\rotv}{ \vect{\mathrm{{rot }}} } 
+\DeclareMathOperator{\rotv}{ \vect{\mathrm{{rot}}} } 
+%\newcommand{\Rot}{\mathbf{{rot }} } 
+\DeclareMathOperator{\Rot}{\mathbf{{rot}} } 
+\newcommand{\eT}{\mathbb{T}}
+\newcommand{\mZero}{\setminus \lbrace 0 \rbrace}
+\newcommand{\mUn}{\setminus \lbrace -1 \rbrace}
+\newcommand{\mPi}{\setminus \lbrace \pi\rbrace}
+%\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\newcommand{\BB}[1]{\begin{equation}  \label{#1} \begin{aligned}}
+\newcommand{\EE}{ \end{aligned} \end{equation}}
+
+\newcommand{\BBl}[1]
+{
+\begin{equation} \label{#1}
+\left|
+ \begin{aligned}
+ }
+ 
+\newcommand{\EEl}{
+ \end{aligned} 
+ \right. 
+ \end{equation}
+ }
+ 
+ \newcommand{\ald}{\[ \begin{aligned}}
+   \newcommand{\alf}{ \end{aligned} \]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% THEOREMES/DEFINITIONS/ETC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\theoremstyle{plain}
+
+%\newtheorem{prop}{Proposition}[chapter]
+%\newtheorem{thm}{Théorème}[chapter]
+%\newtheorem{lemme}{Lemme}[chapter]
+%\newtheorem{coro}{Corollaire}[chapter]
+
+%\theoremstyle{remark}
+
+\newtheorem{rmk}{Remarque}[chapter]
+\newtheorem{defi}{Définition}[chapter]
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{Example}{Example}[chapter]
+\newtheorem{Exercise}{Exercise}[chapter]
+%\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}{Lemma}[chapter]
+\newtheorem{pro}{Proposition}[chapter]
+\newtheorem{cor}{Corollary}[chapter]
+%\newtheorem{rmk}{Remark}
+\newtheorem{dfn}{Definition}[chapter]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% REFERENCES AUX EQUATIONS DES AUTRES CHAPITRES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xr}
+\externaldocument[I-]{chapters/Intro}
+\externaldocument[I-]{chapters/population}
+%\externaldocument[II-]{chapters/BoCaCi15_Tcoerc_disc/BoCC15_T_coerc_disc}
+%\externaldocument[III-]{chapters/JCP/BCCC14_B}
+%\externaldocument[IV-]{chapters/guide_scalaire/guide_scal}
+%\externaldocument[IVbis-]{chapters/guide_scalaire/cas_dic}
+%\externaldocument[V-]{chapters/Maxwell/maxwell}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% DEBUT DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\endofdump
+%\tracingall
+\begin{document}
+%\selectlanguage{frenchb}
+%\mtcselectlanguage{french} % titre des minitoc en français
+\frontmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% PAGE DE GARDE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{titlepage}
+
+\begin{center}
+{\LARGE \textsc{University of California, Merced} } \\
+%\vspace{\baselineskip}
+\begin{center}
+\includegraphics[height=3.5cm]{logos/uc_logo.jpg}
+%\includegraphics[height=3.5cm]{logos/X.jpg}\\
+\end{center}
+\vspace{\baselineskip}
+%\LARGE \textbf{Thèse} \\
+\vspace{\baselineskip}
+%\large Notes dédicated  \\
+%\large \textsc{Docteur de l'École Polytechnique} \\
+
+\vspace{\baselineskip}
+%\large Spécialité : Mathématiques Appliquées \\
+\vspace{\baselineskip}
+%par \\
+\vspace{\baselineskip}
+\Large \textbf{Camille \textsc{Carvalho}}
+\vspace{\baselineskip}
+%\LARGE\fbox{\parbox{\textwidth}{
+\rule{\linewidth}{1.5 pt}
+\begin{center}
+\textsc{\textbf{Math 150: Mathematical Modeling} }
+\end{center}
+\rule{\linewidth}{1.5 pt}
+%}}
+\vfill
+\large Material (lecture notes, exercices, and model problems) necessary for the course. Topics include: population dynamics, random walkers, linear and quadratic optimization, maximum likelihood, command and control, stochastic differential equations.
+\end{center}
+\vspace{\baselineskip}
+\includegraphics[height=3 cm]{logos/pop.png}\hfill
+\includegraphics[height=3.5 cm]{logos/heat_eq.png}\hfill
+\includegraphics[height=3.5cm]{logos/rw.png}\hfill
+\includegraphics[height=3cm]{logos/standard_normal.png}
+\vfill
+\begin{center}
+\begin{tabular}{ll}
+Copyright Carvalho 2021 
+%\textsc{Bonnet-Ben Dhia} \hspace{1cm}  & Directrice de thèse \\
+\end{tabular}
+\end{center}
+\end{titlepage}
+
+
+\dominitoc
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% CONTENU
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\clearpage
+\mainmatter
+\pagestyle{fancy}
+
+
+\titlecontents{chapter}% <section-type>
+  [0pt]% <left>
+  {~\\}% <above-code>
+  {\bfseries\chaptername\ \thecontentslabel \quad}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\bfseries\hfill\contentspage}% <filler-page-format>
+
+
+%%%%%%% EN TRAVAUX idée de plan simplement %%%%%%%%%%%
+%\setcounter{mtc}{*corresponding previous section number*}
+
+\newpage
+%\selectlanguage{frenchb}
+%\mtcselectlanguage{french} % titre des minitoc en français
+\setcounter{chapter}{0}
+\chapter{Introduction to mathematical modeling}\label{chap1}
+\include{chapters/intro}
+
+\chapter{Modeling population dynamics}\label{chap2}
+\include{chapters/population}
+
+\chapter{A brief overview of Partial Differential Equations}\label{chap2bis}
+\include{chapters/pde}
+ 
+\chapter{Random walks}\label{chap3}
+\include{chapters/random}
+
+\chapter{Linear and quadratic optimization}\label{chap4}
+
+\chapter{Maximum likelihood estimates}\label{chap5}
+
+\chapter{Stochastics Differential Equations}\label{chap6}
+
+\chapter{Controle and command}\label{chap7}
+\end{document}

@@ -1,0 +1,579 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{palatino}
+\usepackage{fancyhdr}
+
+% document size parameters
+
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textheight}{8.4in}
+\setlength{\textwidth}{6.5in}
+\setlength{\voffset}{-0.40in}
+\setlength{\headsep}{26pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\usepackage{graphicx}
+% header information
+\usepackage[normalem]{ulem}
+\usepackage{color,hyperref}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=blue,urlcolor=blue,
+            anchorcolor=lue,citecolor=blue}
+\pagestyle{fancyplain}
+\lhead{\large{\textbf{MATH 150: Mathematical Modeling}} - Syllabus}
+\rhead{\textit{Spring  2021}}
+
+% user defined macros
+
+\newcommand{\secskip}{\vspace{6pt}}
+
+\begin{document}
+
+
+
+\textbf{COURSE GOAL.} Enable students to build mathematical models of real-world systems, analyze them and make predictions about behavior of these systems. 
+A variety of modeling techniques will be discussed with examples taken from physics, biology, chemistry, economics and other fields. 
+
+%The focus of the course will be on seeking the connections between mathematics and physical systems, studying and applying various modeling techniques to creating mathematical description of these systems, and using this analysis to make predictions about the system?s behavior.
+%Develop an ability to understand and express  abstract and logically organized mathematical thought through the study of functions complex variables.\\
+\textbf{Lecture time:} MW, 3:30 pm -- 4:45 pm\\
+\textbf{Lecture room:} online via zoom \href{https://ucmerced.zoom.us/meeting/register/tZEqcOmrrzojHNEMAVa5yrDoID3ObUflidPc}{(Click here to access)}
+
+ {\bf Instructor:} Camille Carvalho
+\begin{description}
+   \item {\bf E-mail address.}  \href{mailto:ccarvalho3@ucmerced.edu}{\texttt{ccarvalho3@ucmerced.edu}}  (please put {\tt Math-150-S21} in the object of your email)
+%  \item {\bf Office.} ACS 352
+  \item {\bf Office hours.} Lecture times will be treated as office hours. You can make an appointment by email if needed.
+\end{description}
+
+\textbf{Discussion section leader.} \href{mailto:hstepanian@ucmerced.edu}{Haik Stepanian}
+\begin{description}
+\item \textbf{Section Math 150-02D} W 5:30 pm -- 6:20 pm, online via zoom 
+\href{ https://ucmerced.zoom.us/meeting/register/tZwpcOmrrDojG9UFD4lreMytMs0ECmwD0BBP}{(Click here to access)}
+\item \textbf{Office hours.} W 5pm-5:30pm
+\end{description}
+\textbf{\textcolor{blue}{We encourage students to join discussion section 30min in advance (5pm-6:20pm). It is not mandatory, but it gives you more time to work on the worksheet material.}}
+
+\textbf{Concrete Learning Outcomes (CLOs)} 
+\begin{enumerate}
+\item Construct a mathematical model of a given phenomenon.
+\item Assess how accurate and useful a model is.
+\item Evaluate the complexity of the calculations involved in a model.
+\item Analyze the mathematical behavior of a model.
+\item Present verbally an original model and discuss its usefulness.
+\end{enumerate}
+
+\secskip
+
+% Our PLOs are:
+% 1 Solve mathematical problems using analytical methods.
+% 2 Solve mathematical problems using computational methods.
+% 3 Recognize the relationships between different areas of mathematics and the connections between mathematics and other disciplines.
+% 4 Give clear and organized written and verbal explanations of mathematical ideas to a variety of audiences.
+% 5 Model real-world problems mathematically and analyze those models using their mastery of the core concepts.
+
+\textbf{Relationship to Program Learning Outcomes (PLOs)} \\
+The Applied Mathematics Major PLOs are:
+\begin{enumerate}
+\item Solve mathematical problems using analytical methods.
+\item Solve mathematical problems using computational methods.
+\item Recognize the relationships between different areas of mathematics and the connections between mathematics and other disciplines.
+\item Give clear and organized written and verbal explanations of mathematical ideas to a variety of audiences.
+\item Model real-world problems mathematically and analyze those models using their mastery of the core concepts.
+\end{enumerate}
+
+This course will allow the student to make progress toward several Programmatic PLOs. In particular, by satisfying CLO 1 and 2, students will become more proficient with PLOs 1, 2, 3, and 5: Recognize the relationships between different areas of mathematics and the connections between mathematics and other disciplines, and Model real-world problems mathematically and analyze those models using their mastery of the core concepts. By satisfying CLO 3 and 4, students will become more proficient PLO 1 and 2.  By satisfying CLO 5, students will become more proficient PLO 4. \textbf{This class is considered as a capstone for the applied math major. It will involve knowledge from all your previous math classes.}
+
+\secskip
+
+\textbf{Textbook.} There is no textbook in this course, however the following texts are recommended as reference materials: {\it An introduction to mathematical modeling} by Edward A. Bender, {\it Concepts of mathematical modeling} by Walter J. Meyer, {\it How to model it: problem solving for the computer age} by A. M. Starfield, Karl A. Smith, and A. L. Bleloch, and {\it A concrete approach to mathematical modeling} by Mike Mesterton-Gibbons. 
+
+\secskip
+
+\textbf{Topics covered.} This course will be problem-based. We will introduce different techniques and use them in simple models. We present techniques in dynamical systems, optimization, random walks, maximum likelihood parameter estimation, stochastic models, control.
+
+\secskip
+
+\textbf{Programming.} This course contains a programming component. Worksheets, homework assignments, and the final project will require to simulate modeling problems and analyze results. All programming will be required to be \textbf{done in Python}, and project will be written in a Jupyter notebook. \textbf{No knowledge of Python is required to take the class, this is an opportunity to learn it during the semester.} The first discussion section will be dedicated to get started (installation, basic commands, etc). We expect students to have used Matlab before. 
+
+\secskip
+
+\textbf{Course webpage.} The Math 150 website is part of the CatCourses course management system. Use that webpage frequently as all material and discussion will be posted there. \textbf{Take a look at the weekly modules in the homepage.}
+
+\secskip
+
+\textbf{Lecture Videos and Participation Quizzes} 
+Two to three videos will be posted, for a total of twenty to thirty minutes, along with the lecture notes (at least) 24 hours before each lecture time. You will be required to complete one quiz per lecture by 10:00 pm on the lecture day.
+For example, if you have lecture on Wednesday, January 20th, the lecture videos will be posted by on Tuesday, January 19th and you should watch the videos and complete the corresponding quiz by January 20th at 10:00 pm. 
+
+\secskip
+
+\textbf{Lectures/office hours.} 
+During lecture time, the professor will hold office hours to answer questions about the course material, prerequisite material, participation quizzes, and homework problems. Lecture times will be the opportunity to apply and clarify concepts learned in the lecture videos.
+
+\textbf{Discussion sections and Worksheets.} Discussion sections will allow you to solve problems in collaboration with your peers and under the supervision of the discussion leader, and to implement simulations of homework and projects. Discussion sections will meet for fifty minutes each week, where you will develop and practice your problem-solving skills by working with your classmates to solve  problems. Each discussion, you will be given a worksheet to complete in a group of three (if possible), rotating groups each week. \textbf{As a group you will be required to submit your work on Catcourses before the next discussion section}. You may submit at the end of the discussion section, but you can also take the rest of the week to complete it. One group member (randomly assigned as group leader each week) will be required to submit the group work. Each student should be group leader at least once. The submission should be a pdf or a Jupyter notebook. The non coding part can be handwritten or typed, it just needs to be clear and legible. We will be grading those mostly to check for thoughtful completion not for correctness. To accommodate for unexpected emergencies or illness, the three lowest worksheet grades will be dropped when determining final grades. 
+  
+
+% dust bunnies
+% penguins
+% weather
+% team rankings
+% predator-prey
+
+% Diff. Eq, PDEs, Stochastic models, random walkers, calculus of variations.
+
+  \secskip
+
+\textbf{Homework assignments} Homework will be available online on Wednesdays and will be due approximately two weeks later. Part of the homework will be individual, and part will be completed in small groups, randomly assigned. YOU WILL HAVE TO WORK IN GROUPS as part of this class.
+\textbf{Late homework will not be accepted nor graded}, so you should turn in whatever you have completed by the due date. Homework assignments will be uploaded online via Catcourses. Homeworks will be graded by the instructor and the TA. You are allowed to use online resources, {\bf but you must list explicitly any outside sources employed}. You may not copy a solution you find online, and all work you turn in must be your own (or your team's own). This class is particularly susceptible to plagiarism, partial or total. Because of this, {\bf we will be particularly vigilant}. Any confirmed plagiarism will result in an F in the class.
+
+\textbf{Guidelines for homework:} a clear presentation, redaction and reasoning will be important keys in the grading. Write full sentences, explain your choices, clearly indicate your sources. Try to get the habit to type your homework, unless specific accommodations. If there are some numerical simulations involved, results should be included in either a JUPYTER notebook, or a MATHEMATICA notebook. 
+
+\secskip
+
+\textbf{Exams.} There will be no exam in this course.
+\secskip
+
+\textbf{Participation in lecture and discussion sections.} We expect active participation during lecture and discussion sections. This means attending, asking questions, participate in discussions (verbally or in the chat via zoom), work on assigned problems.
+
+\secskip
+\textbf{Final Project: mid-semester video, report, and final project video presentation} The final project in this class will give you an opportunity to come up with a mathematical model of a problem of your choosing. In groups of 3-4, you will identify a problem, come up with a mathematical model, solve your model in various circumstances, and analyze the results. A faculty mentor will be assigned to guide you on the project.\\
+\textbf{Mid-semester video} Once groups for the Final Project are assigned, you will be making a three minute video \textbf{individually} on a modeling problem you want to analyze as a group. If you haven't found a common topic as a group yet, then take this as an opportunity to present a project you could accomplish as a group. We expect a short presentation of the real-world problem you want to model, the model you think might be relevant (equations if applicable) and tools you may need to solve it (do not solve it). The mid-semester video will be \textbf{due Friday March 19 at 11:59pm.} More information about how to make the video will be given later.\\
+\textbf{Final project report} Each student will turn in a written report. The report can be written as a group, except for the conclusion (which has to be individual). Report will be \textbf{due Friday May 7th at 11:59pm}. More information will be given on a separate document.\\
+\textbf{Final project video presentation} Each group will be making a fifteen minutes video that presents your project. The video will be \textbf{due May 13th at 12pm}. More information on the video will be given later.
+
+
+
+\secskip
+
+\textbf{Grade determination.} Your final grade in the course will be based on
+\begin{itemize}
+\item homework assignments (20\%, one lowest will be dropped)
+\item worksheet completion (20\%, three lowest will be dropped)
+\item lecture video quizzes (20\%, four lowest will be dropped)
+\item mid-semester video project (10\%)
+\item final project report (15\%)  
+\item final project video presentation (10\%)
+\item participation in lecture/office hours and in discussion section (5\%)
+\end{itemize}
+
+If your final score is under 55 \% you will earn a D, if you final score is above 85\% you will earn an A.
+
+%\secskip
+%
+%\textbf{General Education requirements.}\\
+%The completion of this course enables you to validate a number of GE badges:
+%\begin{enumerate}
+%\item Crossroads
+%\item Culminating Experience
+%\item Approaches to Knowledge (for Natural Science and/or Engineering Science) 
+%\item Scientific Method
+%\item Quantitative and Numerical Analysis
+%\item Practical and Applied Knowledge
+%\end{enumerate}
+% \begin{figure}[h!]
+%\includegraphics[scale=0.6]{SM.png}
+%\hfill \includegraphics[scale=0.6]{QAN.png}
+%\hfill \includegraphics[scale=0.6]{PAK.png}
+%\end{figure}
+%
+%Your final project report will be the document to add to your GE e-Portfolio to validate your GE requirements.
+%
+
+\secskip
+\textbf{File Type and Uploading File Information:} 
+For any assignment that needs to be turned in, you must upload a pdf  or a Jupyter notebook to Catcourses by the deadline. If you are having trouble uploading, please contact your TA by email in advance of the deadline. We recommend CamScanner as one app that you can use to scan handwritten documents. Feel free to use other apps that you are comfortable with. We recommend testing these before the first deadline. 
+ \secskip
+
+\textbf{Dropping the course.} You may drop this course without paying a fee
+and without further approval before Feb. 8. The course withdrawal deadline is April 6. Please see the UC Merced \textit{General Catalog} for more details.
+
+\secskip
+
+\textbf{Office hours is the key} You are encouraged to go to office hours to get extra feedback/help whenever you
+need it. The instructor and TA both have office hours. Other helpful items are posted on the Catcourses page. You are welcome to send questions to your instructor via e-mail at any (reasonable) time.
+
+\secskip
+
+\textbf{Special accommodations.} If you qualify for accommodations
+because of a disability, please submit a letter from Disability
+Services to the instructor in a timely manner so that your needs may
+be addressed.  Student Affairs determines accommodations based on
+documented disabilities.
+
+The instructor will make every effort to accommodate all students who,
+because of religious obligations, have conflicts with scheduled exams,
+assignments, or required attendance.  Please speak with the instructor
+during the first week of class regarding any potential academic
+adjustments or accommodations that may arise due to religious beliefs
+during this term.
+
+\textbf{Academic integrity.}  Academic integrity is the foundation of
+an academic community and without it none of the educational or
+research goals of the university can be achieved.  All members of the
+university community are responsible for its academic integrity.
+Existing policies forbid cheating on examinations, plagiarism and
+other forms of academic dishonesty.  The current policies for UC
+Merced are described in the UC Merced Interim Academic Honesty Policy
+and Adjudication Procedures available from Students First Center,
+Student Life, Residence Life and College One.  The following general
+guidelines are adapted from the UC Davis Code of Academic Conduct
+(http://sja.ucdavis.edu/cac.htm).
+
+Examples of academic dishonesty include:
+\begin{itemize}
+
+\item receiving or providing unauthorized assistance on examinations
+
+\item using unauthorized materials during an examination
+
+\item plagiarism - using materials from sources without citations
+
+\item altering an exam and submitting it for re-grading
+
+\item fabricating data or references
+
+\item using false excuses to obtain extensions of time or to skip
+  coursework
+
+\end{itemize}
+
+The ultimate success of a code of academic conduct depends largely on
+the degree to which the students fulfill their responsibilities
+towards academic integrity.  These responsibilities include:
+\begin{itemize}
+
+\item Be honest at all times.
+
+\item Act fairly toward others. For example, do not disrupt or seek an
+  unfair advantage over others by cheating, or by talking or allowing
+  eyes to wander during exams.
+
+\item Take group as well as individual responsibility for honorable
+  behavior.  Collectively, as well as individually, make every effort
+  to prevent and avoid academic misconduct, and report acts of
+  misconduct which you witness.
+
+\item Do not submit the same work in more than one class. Unless
+  otherwise specified by the instructor, all work submitted to fulfill
+  course requirements must be work done by the student specifically
+  for that course.  This means that work submitted for one course
+  cannot be used to satisfy requirements of another course unless the
+  student obtains permission from the instructor.
+
+\item Unless permitted by the instructor, do not work with others on
+  graded coursework, including in class and take-home tests, papers,
+  or homework assignments. When an instructor specifically informs
+  students that they may collaborate on work required for a course,
+  the extent of the collaboration must not exceed the limits set by
+  the instructor.
+
+\item Know what plagiarism is and take steps to avoid it. When using
+  the words or ideas of another, even if paraphrased in your own
+  words, you must cite your source. Students who are confused about
+  whether a particular act constitutes plagiarism should consult the
+  instructor who gave the assignment.
+
+\item Know the rules -- ignorance is no defense. Those who violate
+  campus rules regarding academic misconduct are subject to
+  disciplinary sanctions, including suspension and dismissal.
+
+\end{itemize}
+
+\textbf{Basic Needs.} UC Merced provides Basic Needs, more information https://basicneeds.ucmerced.edu.
+\textbf{Free Tutoring} is available through various resources including: \\
+Calvin E. Bright Success Center: \url{http://learning.ucmerced.edu/}  \\ 
+Peer Assisted Learning Support: \url{https://learning.ucmerced.edu/programs/tutoring} 
+
+\textbf{Accessibility:} University of California, Merced is committed to creating learning environments that are accessible to all. If you anticipate or experience physical or academic barriers based on a disability, please feel welcome to contact us privately so we can discuss options. In addition, please contact Student Accessibility Services (SAS) at (209) 228-6996 or disabilityservices@ucmerced.edu as soon as possible to explore reasonable accommodations. All accommodations must have prior approval from Student Accessibility Services on the basis of appropriate documentation. \\ 
+If you anticipate or experience barriers due to pregnancy, temporary medical condition, or injury, please feel welcome to contact us so we can discuss options. You are encouraged to contact the Dean of Students for support and resources at (209) 228-3633 or \url{https://studentaffairs.ucmerced.edu/dean-students}.%The instructor will also make every effort to accommodate students whose religious beliefs/obligations
+%lead to scheduling conflicts with exams, assignments, or attendance. Please speak with the
+%instructor during the first two weeks of class regarding any potential accommodations that
+%may arise due to religious beliefs this semester.
+
+\textbf{University-Wide Course Policies:} \\ 
+Policies:	\url{http://registrar.ucmerced.edu/policies/grades} \\
+Forms:	\url{http://registrar.ucmerced.edu/forms} \\
+For COVID-19 grade options:\\ \url{https://registrar.ucmerced.edu/policies/grades/updates-grading-options}
+ 
+
+
+\textbf{Resources:} 
+\begin{itemize}
+\item COVID 19 student resources: \href{https://success.ucmerced.edu/ }{click here}
+\item Academic Advising: Academic advisors play a key role in supporting students' academic progress, with guidance on policies, petitions, and campus resources at 
+\href{https://ns-advising.ucmerced.edu/}{click here} 
+\item Counseling and Psychological Services (CAPS): In a remote context, continuity of care with psychological services is available - with online sessions (individual and group, scheduled and drop-in) \href{https://counseling.ucmerced.edu/services/counseling-services}{click here}
+\item Technology recommendations and loan options: \\ 
+\href{http://view.marketingcloud.ucmerced.edu/?qs=342d5ebdd778218aae068ef7b999128b2 6fd9a1d238a9912d2a07e37995760cd9146e380dcda1a54cb04ff4bface99968b1ba67a7 30f4ed18292fb994cf7faef93017fc7761a961e}{click here}.
+\item Financial Aid Cost of Attendance Adjustment (including  \$1,200 estimated cost for technology): \href{https://financialaid.ucmerced.edu/COA-adjustment}{click here}
+\end{itemize}
+
+\end{document}
+
+
+\secskip
+\newpage 
+
+\textbf{Academic integrity.}  Academic integrity is the foundation of
+an academic community and without it none of the educational or
+research goals of the university can be achieved.  All members of the
+university community are responsible for its academic integrity.
+Existing policies forbid cheating on examinations, plagiarism and
+other forms of academic dishonesty.  The current policies for UC
+Merced are described in the UC Merced Interim Academic Honesty Policy
+and Adjudication Procedures available from Students First Center,
+Student Life, Residence Life and College One.  The following general
+guidelines are adapted from the UC Davis Code of Academic Conduct
+(http://sja.ucdavis.edu/cac.htm).
+
+Examples of academic dishonesty include:
+\begin{itemize}
+
+\item receiving or providing unauthorized assistance on examinations
+
+\item using unauthorized materials during an examination
+
+\item plagiarism - using materials from sources without citations
+
+\item altering an exam and submitting it for re-grading
+
+\item fabricating data or references
+
+\item using false excuses to obtain extensions of time or to skip
+  coursework
+
+\end{itemize}
+
+The ultimate success of a code of academic conduct depends largely on
+the degree to which the students fulfill their responsibilities
+towards academic integrity.  These responsibilities include:
+\begin{itemize}
+
+\item Be honest at all times.
+
+\item Act fairly toward others. For example, do not disrupt or seek an
+  unfair advantage over others by cheating, or by talking or allowing
+  eyes to wander during exams.
+
+\item Take group as well as individual responsibility for honorable
+  behavior.  Collectively, as well as individually, make every effort
+  to prevent and avoid academic misconduct, and report acts of
+  misconduct which you witness.
+
+\item Do not submit the same work in more than one class. Unless
+  otherwise specified by the instructor, all work submitted to fulfill
+  course requirements must be work done by the student specifically
+  for that course.  This means that work submitted for one course
+  cannot be used to satisfy requirements of another course unless the
+  student obtains permission from the instructor.
+
+\item Unless permitted by the instructor, do not work with others on
+  graded coursework, including in class and take-home tests, papers,
+  or homework assignments. When an instructor specifically informs
+  students that they may collaborate on work required for a course,
+  the extent of the collaboration must not exceed the limits set by
+  the instructor.
+
+\item Know what plagiarism is and take steps to avoid it. When using
+  the words or ideas of another, even if paraphrased in your own
+  words, you must cite your source. Students who are confused about
+  whether a particular act constitutes plagiarism should consult the
+  instructor who gave the assignment.
+
+\item Know the rules -- ignorance is no defense. Those who violate
+  campus rules regarding academic misconduct are subject to
+  disciplinary sanctions, including suspension and dismissal.
+
+\end{itemize}
+\textbf{One Minute Video:} 
+During Week 15 in discussion section you will be making a one to two minute video individually on an assigned topic. A list of topics will be provided two weeks in advance. You will be assigned one of these topics to make a video upon at the beginning of your discussion section. During the discussion section you will make the video using zoom and upload it. 
+
+
+\textbf{File Type and Uploading File Information:} 
+For any assignment that needs to be turned in, you must upload a pdf to Catcourses by the deadline. If you are having trouble uploading, please contact your TA by email in advance of the deadline. We recommend CamScanner as one app that you can use to scan handwritten documents. Feel free to use other apps that you are comfortable with. We recommend testing these before the first deadline. 
+
+%\textbf{Green/Blue books:} Each student is required to purchase {\bf three}
+%green/blue books and give them to the Teaching Assistant by {\bf Wednesday Sept 4}.
+%Green books are preferred to blue books, because they are made from a recycled material.
+%These will be distributed during the exams, so please do not write anything (not even your name) on the books.
+
+\textbf{Dropping the course:} 
+Please see the instructors and consult the 
+UC Merced \textit{General Catalog} for details. You can drop the course until September 16, 2020 at 4:30 pm.
+
+\textbf{Electronic Devices:} 
+We recommend that you use a calculator (graphing or otherwise) and/or other
+computational tools (\textit{e.g.\ Mathematica, Maple, Matlab, Octave, Python, Jupyter notebooks, etc.}) 
+to aid in your completion of homework assignments.  
+You may need some calculation tools for certain homework and discussion section
+problems,  but not on quizzes or assessments.
+
+\textbf{Extra help:} You are highly encouraged to get extra help if you need it.
+ Instructor and Teaching Assistant office hours are listed above. 
+%Other helpful items are posted on the UCM Catcourses page under Resources.
+You are welcome to send questions to the Instructor and Teaching Assistants via e-mail at any time. Short, specific emails have a very high probability of being answered quickly.
+
+\textbf{Free Tutoring} is available through various resources including: \\
+Calvin E. Bright Success Center: \url{http://learning.ucmerced.edu/}  \\ 
+Peer Assisted Learning Support: \url{https://learning.ucmerced.edu/programs/tutoring} 
+
+\textbf{Accessibility:} University of California, Merced is committed to creating learning environments that are accessible to all. If you anticipate or experience physical or academic barriers based on a disability, please feel welcome to contact us privately so we can discuss options. In addition, please contact Student Accessibility Services (SAS) at (209) 228-6996 or disabilityservices@ucmerced.edu as soon as possible to explore reasonable accommodations. All accommodations must have prior approval from Student Accessibility Services on the basis of appropriate documentation. \\ 
+If you anticipate or experience barriers due to pregnancy, temporary medical condition, or injury, please feel welcome to contact us so we can discuss options. You are encouraged to contact the Dean of Students for support and resources at (209) 228-3633 or \url{https://studentaffairs.ucmerced.edu/dean-students}.%The instructor will also make every effort to accommodate students whose religious beliefs/obligations
+%lead to scheduling conflicts with exams, assignments, or attendance. Please speak with the
+%instructor during the first two weeks of class regarding any potential accommodations that
+%may arise due to religious beliefs this semester.
+
+\textbf{University-Wide Course Policies:} \\ 
+Policies:	\url{http://registrar.ucmerced.edu/policies/grades} \\
+Forms:	\url{http://registrar.ucmerced.edu/forms} \\
+For COVID-19 grade options:\\ \url{https://registrar.ucmerced.edu/policies/grades/updates-grading-options}
+ 
+
+\textbf{Academic Intellectual Property:} 
+All content and material in this course is protected and may not be shared uploaded or distributed.
+
+
+
+
+\textbf{Academic Integrity:}  
+Academic integrity is the foundation of an academic community and without it none of the educational or research goals of the university can be achieved. Academic integrity 
+applies to research as well as undergraduate and graduate coursework/exams. Existing policies forbid cheating on examinations, plagiarism and other forms of academic dishonesty. UC Merced students are held to high standards of personal and professional conduct in compliance with the UC Merced Academic Honesty Policy and the UCM Code of Student Conduct. UCM Code of Student Conduct can be found here: \url{http://studentconduct.ucmerced.edu}
+
+%Academic Integrity is the foundation of an
+%academic community and without it none of the educational or research goals
+%of the university can be achieved.  All members of the university community
+%are responsible for its academic Integrity.  Existing policies forbid
+%cheating on examinations, plagiarism and other forms of academic dishonesty.
+%The current policies for UC Merced are described in the  Academic Honesty
+%Policy\footnote{See under Student Judicial Affairs at
+ % \url{http://studentlife.ucmerced.edu}} 
+Examples of academic dishonesty include:
+\begin{itemize}
+
+\item receiving or providing unauthorized assistance on examinations
+
+\item using unauthorized materials during an examination
+
+\item plagiarism - using materials from sources without citations
+
+\item altering an exam and submitting it for re-grading
+
+\item fabricating data or references
+
+\item using false excuses to obtain extensions of time or to skip  coursework.
+
+\end{itemize}
+
+The ultimate success of a code of academic conduct depends largely on
+the degree to which the students fulfill their responsibilities
+towards academic integrity.  These responsibilities include:
+\begin{itemize}
+
+\item Be honest at all times.
+
+\item Act fairly toward others. For example, do not disrupt or seek an
+  unfair advantage over others by cheating, or by talking or allowing
+  eyes to wander during exams.
+
+\item Take group as well as individual responsibility for honorable
+  behavior.  Collectively, as well as individually, make every effort
+  to prevent and avoid academic misconduct, and report acts of
+  misconduct which you witness.
+
+\item Do not submit the same work in more than one class. Unless
+  otherwise specified by the instructor, all work submitted to fulfill
+  course requirements must be work done by the student specifically
+  for that course.  This means that work submitted for one course
+  cannot be used to satisfy requirements of another course unless the
+  student obtains permission from the instructor.
+
+\item Unless permitted by the instructor, do not work with others on
+  graded coursework, including in class and take-home tests, papers,
+  or homework assignments. When an instructor specifically informs
+  students that they may collaborate on work required for a course,
+  the extent of the collaboration must not exceed the limits set by
+  the instructor.
+
+\item Know what plagiarism is and take steps to avoid it. When using
+  the words or ideas of another, even if paraphrased in your own
+  words, you must cite your source. Students who are confused about
+  whether a particular act constitutes plagiarism should consult the
+  instructor who gave the assignment.
+
+\item Know the rules -- ignorance is no defense. 
+  Those who violate campus rules regarding academic misconduct are subject to
+  disciplinary sanctions, including suspension and dismissal.
+
+\end{itemize}
+
+%\textcolor{red}{ADD STUFF BASED ON DEPT RECOMMENDATION FOR HONESTY CODE FOR REMOTE LEARNING }
+
+%\newpage
+\textbf{Homework and Collaborative Assessments preparation requirements \& guidelines}
+%\footnote{
+%\url{http://www.math.hmc.edu/homework/} }
+
+Learning mathematics involves learning how to communicate your ideas
+effectively.  As a student, much of this communication will be in a written form, 
+either by homework, quizzes, or assessments.  
+So that we may provide you with meaningful and
+worthwhile feedback, it is important that you write your work in an easy
+to read, easy to navigate format.  After all, how you present your work
+should enhance the ideas you are trying to communicate, not impede them.
+
+It is good practice to first work out the solutions to the problems on
+scratch paper, and to then neatly write up your solutions. 
+
+The following are the \textbf{requirements} for submitting work in MATH 24:
+
+\begin{itemize}
+
+\item Your handwriting should be legible.
+
+\item In the upper right-hand corner you must write (in this order):
+\begin{itemize}
+  \item First and Last Names of all students in the group
+  \item ``MATH 24'', followed by your Discussion Section Number or Teaching Assistant's name.
+\end{itemize}
+
+\item Problems should be clearly labeled and numbered on the left-hand side
+of the page.  There should also be a visible separation between problems.
+
+\item All graphs should have clearly labeled axes.
+
+\end{itemize}
+
+\textbf{Free Tutoring} is available through various resources including: \\
+Calvin E. Bright Success Center: \url{http://learning.ucmerced.edu/}  \\ 
+Peer Assisted Learning Support: \url{https://learning.ucmerced.edu/programs/tutoring} 
+
+\textbf{Accessibility:} University of California, Merced is committed to creating learning environments that are accessible to all. If you anticipate or experience physical or academic barriers based on a disability, please feel welcome to contact us privately so we can discuss options. In addition, please contact Student Accessibility Services (SAS) at (209) 228-6996 or disabilityservices@ucmerced.edu as soon as possible to explore reasonable accommodations. All accommodations must have prior approval from Student Accessibility Services on the basis of appropriate documentation. \\ 
+If you anticipate or experience barriers due to pregnancy, temporary medical condition, or injury, please feel welcome to contact us so we can discuss options. You are encouraged to contact the Dean of Students for support and resources at (209) 228-3633 or \url{https://studentaffairs.ucmerced.edu/dean-students}.%The instructor will also make every effort to accommodate students whose religious beliefs/obligations
+%lead to scheduling conflicts with exams, assignments, or attendance. Please speak with the
+%instructor during the first two weeks of class regarding any potential accommodations that
+%may arise due to religious beliefs this semester.
+
+\textbf{University-Wide Course Policies:} \\ 
+Policies:	\url{http://registrar.ucmerced.edu/policies/grades} \\
+Forms:	\url{http://registrar.ucmerced.edu/forms} \\
+For COVID-19 grade options:\\ \url{https://registrar.ucmerced.edu/policies/grades/updates-grading-options}
+ 
+
+
+\textbf{Resources:} 
+\begin{itemize}
+\item COVID 19 student resources: \url{https://success.ucmerced.edu/ }
+\item Academic Advising: Academic advisors play a key role in supporting students' academic progress, with guidance on policies, petitions, and campus resources at 
+\url{https://ns-advising.ucmerced.edu/} 
+\item Counseling and Psychological Services (CAPS): In a remote context, continuity of care with psychological services is available - with online sessions (individual and group, scheduled and drop-in) \url{https://counseling.ucmerced.edu/services/counseling-services}
+\item Technology recommendations and loan options: \\ 
+\url{http://view.marketingcloud.ucmerced.edu/?qs=342d5ebdd778218aae068ef7b999128b2 6fd9a1d238a9912d2a07e37995760cd9146e380dcda1a54cb04ff4bface99968b1ba67a7 30f4ed18292fb994cf7faef93017fc7761a961e}.
+\item Financial Aid Cost of Attendance Adjustment (including  \$1,200 estimated cost for technology): \url{https://financialaid.ucmerced.edu/COA-adjustment}
+\end{itemize}
+
+
+\end{document}

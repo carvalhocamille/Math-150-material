@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\input{headerhw.tex}
+
+\chead{\textbf{Discussion 9: March 17}}
+
+\begin{document}
+The goal of this discussion section if to get familiar to definitions and tools for optimization.\\
+Participation in discussion section counts as 5\% of the grade. Completion of the worksheets counts as 20\% of the grade. \textbf{Submit your worksheet work by \textcolor{red}{March 31st} at 2:59pm.}
+
+Consider the functions $J_1: K_1 \to \mathbb{R}$, $J_2: K_2 \to \mathbb{R}$ such that for $v \in \mathbb{R}^3$, 
+\[ J_1(v) = b^\intercal v, \qquad J_2(v) = \frac{1}{2} v^\intercal A v - b^\intercal v,\]
+where the matrix $A \in \mathbb{R}^{3 \times 3}$, and the vector $b\in \mathbb{R}^3$ are defined by
+\[
+A = \begin{pmatrix}
+2 & -1 & 0 \\
+-1 & 2 & -1 \\
+0 & -1 & 2
+\end{pmatrix}, \quad b = \begin{pmatrix}
+-3 \\ 1 \\2
+\end{pmatrix}.
+\]
+We consider the sets $K_1 = \lbrace  v  = \langle v_1, v_2, v_3\rangle \in \mathbb{R}^3 | v_2 + v_3 \leq 4, \, v_1 \leq 4, \, v_1, v_2, v_3  \geq 0\rbrace$, and $K_2 = \lbrace  v  = \langle v_1, v_2, v_3\rangle \in \mathbb{R}^3 | v_2 + v_3 = 0, \, v_1 \geq 0\rbrace$.
+The goal is to study the problems
+\[  \underset{ v \in K_1}{\max} J_1(v), \qquad \underset{ v \in K_2}{\min} J_2(v)\]
+
+\begin{enumerate}
+\item Sketch the sets $K_1$, $K_2$. You may use your computer to graph (any tool you'd like).
+\item Show that $K_1$ and $K_2$  are convex sets.
+\item Is $K_1$ bounded ?
+\item Show that $J_1$ is a concave function and that $J_2$ is a strictly convex function.
+\item Conclude if we can find a unique solution for each problem or not.
+%\item Rewrite the constrains in $K_1$ of the form $K_1  = \lbrace v \in \mathbb{R}^3|Cv \leq f, v \geq 0 \rbrace $ with $C$, $f$ to determine.
+%\item Rewrite the constrains in $K_1$ of the form $K_2  = \lbrace v \in \mathbb{R}^3|Cv \leq f \rbrace $ with $C$, $f$ to determine.
+%\item Use the simplex method to compute the maximum of $J_1$.
+%\item Write the optimal conditions to find the minimum of $J_2$.
+%\item Compute the minimum of $J_2$.
+%\item Come up with an application these problems could represent (be creative).
+\item Submit your work on Catcourses under the assignment \texttt{Worksheet 9} \textbf{as a .pdf}. 
+\end{enumerate}
+
+\end{document}

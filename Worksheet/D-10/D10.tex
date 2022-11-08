@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=blue,urlcolor=blue,
+            anchorcolor=lue,citecolor=blue}
+\input{headerhw.tex}
+
+\chead{\textbf{Discussion 10:}}
+
+\begin{document}
+
+The goals of this discussion section are: 
+
+\begin{enumerate}
+\item Work on your homework 7 group problem (early start compared to other times)
+\item Get familiar with linear solvers
+\end{enumerate}
+
+Participation in discussion section counts as 5\% of the grade. Completion of the worksheets counts as 20\% of the grade. \textbf{Submit your worksheet work by April 7th at 2:59pm.}
+
+\begin{enumerate}
+%where we will chose here $\sigma  = 10$, $\beta = 8/3 $ and $\rho$, proportional to $\Delta T$ will be the parameter to vary (aka test different values).
+\item Work on your Homework 7 as a group. Take advantage of this common time to make the most of it (recall it is due by April 14th at 11:59pm). Take this time to get familiar with the problem and assign roles.
+\item Solve a $5 \times 5$ linear system of the form $A x = b$, with $A$, $b$ of your choice ($A$ can't be the identity matrix, and should have most of its entry non zero). Compare with the solution obtained while computing directly $x =A^{-1}b $ with the one obtained with the \texttt{conjugate\_gradient} function 
+\begin{verbatim}
+def conjugate_gradient(A, b, x0, eta, Imax):
+    x = x0
+    r = b - A@x
+    d = r 
+    n0 = np.dot(r,r)
+    n1 = n0
+    res = []
+    i = 0
+    while n0 > eta, and i < Imax:
+        z = A@d
+        alpha = n0 / (np.dot(z,d))
+        x = x + alpha * d
+        r = r - alpha * z
+        n1 = np.dot(r,r)
+        beta = n1 / n0
+        d = r + beta * d
+        n0 = n1
+        i = i+1
+        res = [res, np.sqrt(n1)]
+        if np.sqrt(n1) > 1e10:
+            break
+    return x, i, res
+\end{verbatim}
+Provide comments on your choices of parameters, what you observe overall (computational time, error, etc.).
+%\begin{enumerate}
+\item Submit your work (\textbf{only item 2.}) on Catcourses under the assignment \texttt{Worksheet 10} \textbf{as a .pdf}. You will submit your work for item 1. within the assignment \texttt{Homework 7 (group)} in two weeks.
+\end{enumerate}
+
+\end{document}

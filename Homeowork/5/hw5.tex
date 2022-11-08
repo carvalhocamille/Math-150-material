@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\input{headerhw.tex}
+\usepackage{graphicx}
+\chead{\textbf{Homework 5: group work}}
+
+\begin{document}
+
+{\bf Submit your work on Catcourses by March 17th at 11:59pm}
+
+Please be aware that in this homework, your approach and your justifications will be given {\bf a lot} more importance than your final results. This means that you should think about how you will present and explain your work so that what you turn in makes sense, even if it is read by someone unfamiliar with the problem. This is a good training for your final report project.\\
+\textbf{Read entirely the homework assignment first !}
+
+Groups will be randomly assigned soon (\textbf{check catcourses announcements}). In each you will have to assign:
+\begin{itemize}
+\item A group leader (manages communication within the group)
+\item A work submission leader (submits the group work on behalf of the group)
+\end{itemize}
+
+
+%\begin{itemize}
+%\item Be familiar with notebook
+%\item scales, create simple models maybe
+%\item dynamical systems a little bit ? 
+
+\begin{enumerate}
+ \item Identify a real system that includes a quantity that may be described using random walkers, or identify a real system when randomness intervenes. Describe this system including all relevant details and citing sources when appropriate (explain how you know what you describe).
+
+\item Develop a model for this system using random walkers. Devise appropriate rules for the walkers to follow and justify those rules.
+
+\item Implement your model and compute a few realizations of your model. Describe what your model does well and what it does poorly relative to the real system.
+
+\item Submit all your answers \textbf{in a single .ipynb} on Catcourses your answers under the assignment \texttt{Homework 5 (group)}. The work submission leader of each group is responsible for the submission.
+\end{enumerate}
+
+
+%In the file {\tt HW1\_xvec.mat} you will find data relevant for this homework.
+%
+%You may load this data, and plot it, into Matlab using the following commands:
+%\begin{verbatim}
+%data = load('HW1_xvec.mat');
+%plot(data.x,data.y1)
+%plot(data.x,data.y2)
+%xshort = data.x(1:100);
+%y3short = data.y3(1:100);
+%plot(xshort,y3short)
+% \end{verbatim}  
+%  
+% \begin{enumerate}
+% \item Define two simple weather models that predict daily temperature and rainfall. Compare those models with commercial predictions and actual weather every day for one week, and assess which models performed best. Justify your rankings.
+% 
+% \item Try to determine the best possible function to fit the data $y_1$, which represents a function of the data in $x$ (that is for every index $i$, $y_1^i = f_1(x^i)$). Indicate what functions you tried (even the ones that were not the best) and how you determined which function was the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_2$, which represents a function of the data in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_{3short}$, for the first 100 entries of $y_3$ which represents a {\bf periodic} function of the first 100 entries in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best.
+% \end{enumerate}
+   
+% y1 = 3*x.^2 + 4./x + 0.01*sin(4*x) + 3;
+% y2 = 2*log(x) - x/3;
+% y3 = cos(7*x*2*pi) + 3*sin(x*2*pi) + 0.5*sin(4*x*2*pi);
+% for the first 100 entries only, periodic afterwards
+
+
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=blue,urlcolor=blue,
+            anchorcolor=lue,citecolor=blue}
+\input{headerhw.tex}
+
+\chead{\textbf{Discussion 4:}}
+
+\begin{document}
+
+The goals of this discussion section are: 
+
+\begin{enumerate}
+\item Be able to study equilibrium of some dynamical systems
+\item Identify a model of population dynamics
+\end{enumerate}
+
+Participation in discussion section counts as 5\% of the grade. Completion of the worksheets counts as 20\% of the grade. \textbf{Submit your worksheet work by February 17th at 2:59pm.}
+
+The Lorenz equations form a simplified mathematical model for atmospheric convection. It is given by
+\[ \begin{aligned}
+& \frac{dX}{dt} = \sigma(Y -X) \\
+&  \frac{dY}{dt}=  - XZ + \rho X - Y \\
+&  \frac{dZ}{dt} = XY - \beta Z
+\end{aligned}\]
+with $\sigma$, $\rho$, $\beta$ some constants.
+Those equations describe the rate of change of three quantities with respect to time: X is proportional to the rate of convection, Y to the horizontal temperature variation, and Z to the vertical temperature variation. The constants $\sigma$, $\rho$, $\beta$ are system parameters proportional to the Prandtl number, Rayleigh number, and certain physical dimensions of the atmospheric layer.
+\begin{enumerate}
+%where we will chose here $\sigma  = 10$, $\beta = 8/3 $ and $\rho$, proportional to $\Delta T$ will be the parameter to vary (aka test different values).
+\item Make some observations about the system using this \href{https://alpha.iodide.io/notebooks/2275/?viewMode=report}{code}. In particular try the values given in Exercise 2.12 from \texttt{Math150\_Chapter2.pdf}
+\item Discretize the Lorenz equations using Runge-Kutta methods (of order 2 or order 4). You may take inspiration from \href{https://matplotlib.org/3.2.1/gallery/mplot3d/lorenz_attractor.html}{this notebook} and adjust, or use techniques discussed in Remark 2.4 from  \texttt{Math150\_Chapter2.pdf}. Explain your choice.
+\item Fixing $\sigma = 10$, $\beta  = \frac{8}{3}$, make observations for the following cases:
+\begin{itemize}
+\item test for $0 < \rho <1$
+\item test for $0 < \rho <20$, $\rho=1$
+\item test for $\rho = 28$
+\end{itemize}
+We suggest to create different code cells in your .ipynb for each test, and write comments below each simulation.
+%\begin{enumerate}
+\item Submit your work on Catcourses under the assignment \texttt{Worksheet 4} \textbf{as a .ipynb}. Do not forget to submit scans of the handwritten answers as well if they are not typed in the .ipynb.
+\end{enumerate}
+
+\end{document}

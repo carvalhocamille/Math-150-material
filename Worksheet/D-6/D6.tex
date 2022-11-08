@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+
+\input{headerhw.tex}
+
+\chead{\textbf{Discussion 6: February 24}}
+\begin{document}
+The goals of this discussion section are: 
+
+\begin{enumerate}
+\item Implement random walkers in 1D.
+\end{enumerate}
+
+Participation in discussion section counts as 5\% of the grade. Completion of the worksheets counts as 20\% of the grade. \textbf{Submit your worksheet work by March 3rd at 2:59pm.}
+
+
+The goal is to create a Python function that will simulate random walkers in two dimensions. The principle is the following: given $N$ random walkers, located in some square of size $a$ centered at $(x_0,y_0)$, we want to track their location in time. At each time-step $\Delta t$, the walkers can move left, right of length $\Delta x$, or up down of length $\Delta y$, according to some rules to set. \textbf{Work as a group to provide simulations. You may start with a 1D simulation then 2D simulation.}\\ 
+
+Here are some questions and steps to help you create this script.
+\begin{itemize}
+\item What are the inputs of your function ? What are the outputs ?
+\item Create a function that encapsulates the rules for one random walker in two dimensions (or one if you start with those cases). What is the easiest rules you could think of ?
+\item How would you update the position of the walkers at each time-step ?
+\item Make an animation of the walkers at each time step.
+\end{itemize}
+
+\begin{enumerate}
+\item Once you defined your function, provide one example (of your choice), and provide your conjecture of the governing equation described by the random walkers. 
+\item Submit your work on Catcourses under the assignment \texttt{Worksheet 6} \textbf{as a .ipynb}. 
+\end{enumerate}
+
+\end{document}

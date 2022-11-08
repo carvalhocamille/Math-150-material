@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=blue,urlcolor=blue,
+            anchorcolor=lue,citecolor=blue}
+\input{headerhw.tex}
+
+\chead{\textbf{Homework 3: group work}}
+
+\begin{document}
+
+{\bf Submit your work on Catcourses by February 24th at 11:59pm}
+
+Please be aware that in this homework, your approach and your justifications will be given {\bf a lot} more importance than your final results. This means that you should think about how you will present and explain your work so that what you turn in makes sense, even if it is read by someone unfamiliar with the problem. This is a good training for your final report project.\\
+\textbf{Read entirely the homework assignment first !}
+
+Groups will be randomly assigned soon. In each you will have to assign:
+\begin{itemize}
+\item A group leader (manages communication within the group)
+\item A work submission leader (submits the group work on behalf of the group)
+\end{itemize}
+
+\href{http://slither.io/}{Slither.io} is a multiplayer online video game where players control an avatar resembling a worm, which consumes multicolored pellets, both from other players and ones that naturally spawn on the map in the game, to grow in size. The objective of the game is to grow the longest worm in the server. The goal is to provide some mathematical model of this game.
+\begin{enumerate}
+\item First, go play a little bit to understand \href{http://slither.io/}{Slither.io}
+\item Come up with a system of equations to model this game using concepts from dynamical systems. Explain your choices (what do you want to track over time), describe all parameters you need, etc. You can make simplifications or assumptions (as many as you feel you need) as long as you explain them. It is up to you to decide initial values for whatever you need and explain your choices. 
+\item If applicable: find the equilibrium points of your system and study their stability.
+\item If applicable: find an expression of your solution.
+\item Solve numerically your system. Precise the scheme you use and how you compute the initial condition(s). Try at least 3 different initial situations.
+\item Analyze your results, comment on your model, and discuss limitations. In particular discuss what could be added to your model, and how you would proceed.
+\item Submit all your answers \textbf{in a single .ipynb} on Catcourses your answers under the assignment \texttt{Homework 3 (group)}. The work submission leader of each group is responsible for the submission.
+\end{enumerate}
+
+%In the file {\tt HW1\_xvec.mat} you will find data relevant for this homework.
+%
+%You may load this data, and plot it, into Matlab using the following commands:
+%\begin{verbatim}
+%data = load('HW1_xvec.mat');
+%plot(data.x,data.y1)
+%plot(data.x,data.y2)
+%xshort = data.x(1:100);
+%y3short = data.y3(1:100);
+%plot(xshort,y3short)
+% \end{verbatim}  
+%  
+% \begin{enumerate}
+% \item Define two simple weather models that predict daily temperature and rainfall. Compare those models with commercial predictions and actual weather every day for one week, and assess which models performed best. Justify your rankings.
+% 
+% \item Try to determine the best possible function to fit the data $y_1$, which represents a function of the data in $x$ (that is for every index $i$, $y_1^i = f_1(x^i)$). Indicate what functions you tried (even the ones that were not the best) and how you determined which function was the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_2$, which represents a function of the data in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best. Be sure to consider both small and large values of $x$.
+% \item  Try to determine the best possible function to fit the data $y_{3short}$, for the first 100 entries of $y_3$ which represents a {\bf periodic} function of the first 100 entries in $x$. Indicate what functions you tried (even the ones that were not the best) and how you determine which function is the best.
+% \end{enumerate}
+   
+% y1 = 3*x.^2 + 4./x + 0.01*sin(4*x) + 3;
+% y2 = 2*log(x) - x/3;
+% y3 = cos(7*x*2*pi) + 3*sin(x*2*pi) + 0.5*sin(4*x*2*pi);
+% for the first 100 entries only, periodic afterwards
+
+
+\end{document}
